@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Prototype",,
+  title: "Prototype",
 };
 
 export default function RootLayout({

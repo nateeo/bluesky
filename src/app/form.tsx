@@ -52,6 +52,7 @@ export default function Form() {
     );
 
     setSelectedItems(initialSelectedItems);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [numberOfDays]); // Add numberOfDays as dependency
 
   // Separate useEffect for initial data load
@@ -169,12 +170,6 @@ export default function Form() {
 
     setTotalCost(cost);
   }, [selectedItems, numberOfPeople]);
-
-  const addActivity = (activity: Activity, dayIndex: number) => {
-    const newSelectedItems = [...selectedItems];
-    newSelectedItems[dayIndex].activities.push(activity);
-    setSelectedItems(newSelectedItems);
-  };
 
   const removeActivity = (dayIndex: number, activityIndex: number) => {
     const newSelectedItems = [...selectedItems];
